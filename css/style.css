@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'merriweather_sansregular';
+    src: url('../fonts/merriweathersans-regular-webfont.eot');
+    src: url('../fonts/merriweathersans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/merriweathersans-regular-webfont.woff') format('woff'),
+         url('../fonts/merriweathersans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/merriweathersans-regular-webfont.svg#merriweather_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'merriweather_sansbold';
+    src: url('merriweathersans-bold-webfont.eot');
+    src: url('merriweathersans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('merriweathersans-bold-webfont.woff') format('woff'),
+         url('merriweathersans-bold-webfont.ttf') format('truetype'),
+         url('merriweathersans-bold-webfont.svg#merriweather_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'merriweather_sansextrabold';
+    src: url('merriweathersans-extrabold-webfont.eot');
+    src: url('merriweathersans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('merriweathersans-extrabold-webfont.woff') format('woff'),
+         url('merriweathersans-extrabold-webfont.ttf') format('truetype'),
+         url('merriweathersans-extrabold-webfont.svg#merriweather_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'merriweather_sanslight';
+    src: url('merriweathersans-light-webfont.eot');
+    src: url('merriweathersans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('merriweathersans-light-webfont.woff') format('woff'),
+         url('merriweathersans-light-webfont.ttf') format('truetype'),
+         url('merriweathersans-light-webfont.svg#merriweather_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* GLOBAL CSS  */ 
+body{font-family: 'merriweather_sansregular', sans-serif;}
+h1{font-size:30px;font-weight:100;font-family: 'merriweather_sansbold', sans-serif;}
+h2{font-size:23px;}
+h3{font-family: 'merriweather_sansbold', sans-serif;}
+#info{width:100%;}
+#quickInfo{margin-top:20px;}
+table{width:100%; font-weight:200; font-family: 'Ubuntu', sans-serif;}
+tr{text-align: left; min-width:50%;}
+th{font-weight:200;}
+tr:nth-child(odd){
+	background:#ddd;
+}
+.imgMask{height:250px; overflow:hidden; /*padding: 0 5% 0 5%; */}
+.titleImg{ width:100%;}
+.ui-content{padding:0;}
+.role{font-weight:bold;}
+.ui-header{height:60px; padding-top:0;margin-top:-10px;
+background: #787878; /* Old browsers */
+background: -moz-linear-gradient(top,  #787878 0%, #595959 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#787878), color-stop(100%,#595959)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #787878 0%,#595959 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #787878 0%,#595959 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #787878 0%,#595959 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #787878 0%,#595959 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#787878', endColorstr='#595959',GradientType=0 ); /* IE6-9 */
+}
+
+/* ====================================================================================
+* THE LIST PAGE
+==================================================================================== */
+
+#main-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#main-list li{
+	padding-top: 10px;
+	color: #797979;
+	
+}
+#main-list li a{
+	text-decoration: none;
+}
+
+#main-list .wrapper{
+	min-height: 102px;
+	border-width: 0 12px 2px;
+	-webkit-border-image:url(../img/border.png) 2 stretch;
+	-o-border-image:url(../img/border.png) 2 stretch;
+	border-image:url(../img/border.png) 2 stretch;
+}
+
+#main-list .title{
+	text-transform: uppercase;
+	font-family:'merriweather_sansregular';
+	color:#404040;
+	font-size:18px;
+	font-weight: bold;
+	float: left;
+	margin-left: 10px;
+	margin-top: 0;
+	width: 75%;
+	height: 40px;
+}
+
+#main-list img{
+	display: block;
+	height: 89px;
+	width: 20%;
+	background: #ccc;
+	float: left;
+}
+
+#main-list .meta{
+	float: left;
+	width: 75%;
+	margin-left: 10px;
+}
+
+#main-list .meta .likes{
+	float: left;
+	background: url(../img/heart.png) no-repeat;
+	padding-left: 35px;
+	display: block;
+	height: 16px;
+	width: 50px;
+}
+#main-list .meta .new-like{
+	float: left;
+	background: url(../img/btn_like.png) no-repeat;
+	width: 47px;
+	height: 16px;
+	cursor: pointer;
+}
+#main-list .meta .distance{
+	float: right;
+	background: url(../img/location.png) no-repeat;
+	height: 16px;
+	width: 50px;
+	margin-top: 0;
+	margin-left: 30px;
+	padding-left: 35px;
+}
+
+.city{border-right: 12px solid #ee6656;}
+.places{border-right: 12px solid #ffce5c;}
+.history{border-right: 12px solid #1a8ec4;}
+.park{border-right: 12px solid #d1e779;}
+.landmark{border-right: 12px solid #71cbe9;}
+
+/* ====================================================================================
+* THE QUICK ARTICLE PAGE
+==================================================================================== */
+
+/* ====================================================================================
+* THE FULL ARTICLE PAGE
+==================================================================================== */
+
+/* THE HEADER */
+
+#list .headerNav li{
+	float:left;
+	text-decoration:none;
+	list-style:none;
+}
+#list .settings{
+
+	background: url(../img/btn_settings.png)no-repeat;
+	width:29px;
+	height:29px;
+	position: absolute;
+	left:10px;
+	margin-top:15px;
+}
+#list .all{
+	font-size:30px;
+	color:#fff;
+	width:95px;
+	height:35px;
+	text-align:center;
+	text-decoration:none;
+	position:absolute;
+	left:35%;
+	top:15px;
+}
+
+/* DROPDOWN LIST*/
+#dropDlist{
+	border-bottom:10px solid #404040;
+	display:none;
+	z-index:1000;
+}
+#dropDlist a{text-decoration: none; color:#404040;}
+	#dropDlist ul{
+		list-style: none;
+		color:#404040;
+	}
+	#dropDlist ul li{
+		margin-top:20px;
+		padding-bottom:20px;
+		position:relative;
+	}
+	#dropDlist ul li img{position:absolute;bottom:0px;left:0px;}
+	#dropDlist ul li:first-child{padding-bottom:0;}
+	#dropDlist ul li:last-child img{ display:none;}
+
+
+/* RANDOM DESIGN*/
+.showPerLoca{
+	position: absolute;
+	right:10px;
+	background:url(../img/location_black.png)no-repeat;
+	width:29px;
+	height:29px;
+	top:22px;
+	
+}
+
+.showPerLike{
+	
+	background:url(../img/heart_black.png)no-repeat;
+	width:29px;
+	height:29px;
+	position: absolute;
+	right:60px;
+	top:22px;
+}
+/*  LES BOUTONS ACTIFS DE LA NAVIGATION */
+.showPerLocaActive{
+	width:29px;
+	min-height:29px;
+	padding:5px;
+	position: absolute;
+	right:10px;
+	top:15px;
+	background:#646464 url(../img/location_white.png)no-repeat center center;
+	border-radius:5px;
+	box-shadow:inset 2px 0px 2px rgba(65, 65, 65, .5);
+	border:1px solid rgba(65, 65, 65, .7);
+}
+
+.showPerLikeActive{
+	background: #646464 url(../img/coeur_active.png)no-repeat center center;
+	width:29px;
+	min-height:29px;
+	position: absolute;
+	right:60px;
+	top:15px;
+	padding:5px;
+	border-radius:5px;
+	box-shadow:inset 2px 0px 2px rgba(65, 65, 65, .5);
+	border:1px solid rgba(65, 65, 65, .7);
+}
+#list .allActive{
+	font-size:30px;
+	color:#fff;
+	width:95px;
+	height:35px;
+	background:#646464;
+	box-shadow:inset 2px 0px 2px rgba(65, 65, 65, .5);
+	border:1px solid rgba(65, 65, 65, .7);
+	border-radius:5px;
+	text-align:center;
+	text-decoration:none;
+	position:absolute;
+	left:35%;
+	top:18px;
+}
