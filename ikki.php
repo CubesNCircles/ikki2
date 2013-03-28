@@ -8,6 +8,11 @@
 	<meta name="robots" content="all"> 
 	<meta name="author" content=""> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="apple-mobile-web-app-title" content="Ikki">
+	<link rel="apple-touch-startup-image" href="assets/img/4/apple-touch-startup-image.png" media="(device-height:480px)">
+	<link rel="apple-touch-startup-image" href="assets/img/5/apple-touch-startup-image.png" media="(device-height:568px)">
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/jquery.mobile.custom.css">
@@ -24,17 +29,29 @@
 			<a href="#" class="settings"></a>
 			<a href="#" class="all" id="btnAll">All</a>
 			<a href="#" class="showPerLike"></a>
-			<a href="#" class="showPerLoca "></a>
+			<a href="#" class="showPerLocaActive"></a>
 	</div>
 	<div data-role="content">
 		<div id="dropDlist">
 			<ul>
-				<li>All</li>
-				<li class="landmark"><a href="#">Landmark</a> <img src="img/ligne_menuderoulant.png" /></li>
-				<li class="places"><a href="#">Places</a><img src="img/ligne_menuderoulant.png" /></li>
-				<li class="city"><a href="#">City</a><img src="img/ligne_menuderoulant.png" /></li>
-				<li class="history"><a href="#">History</a><img src="img/ligne_menuderoulant.png" /></li>
-				<li class="park"><a href="#">Park</a><img src="img/ligne_menuderoulant.png" /></li>
+				<li><a href="#" class="type active" id="all">All</a></li>
+				<li><a href="#" class="type" id="landmark">Landmark</a></li>
+
+				<li><a href="#" class="type" id="city">City</a></li>
+				<li><a href="#" class="type" id="history">History</a></li>
+				<li><a href="#" class="type" id="edu">Academy</a></li>
+				<li><a href="#" class="type" id="railwaystation">Railway Station</a></li>
+			</ul>
+		</div>
+		<div id="settings">
+			<ul>
+				<li><a href="#" class="type active" id="all">All</a></li>
+				<li><a href="#" class="type" id="landmark">Landmark</a></li>
+				
+				<li><a href="#" class="type" id="city">City</a></li>
+				<li><a href="#" class="type" id="history">History</a></li>
+				<li><a href="#" class="type" id="edu">Academy</a></li>
+				<li><a href="#" class="type" id="railwaystation">Railway Station</a></li>
 			</ul>
 		</div>
 	</div>
@@ -42,17 +59,9 @@
 
 <!-- The article page -->
 <div data-role="page" id="info" class="slidehelp">
-	<div data-role="header"><h1 id="quick-title">Ikki | Geolocation and Wikipedia</h1></div>
+	<div data-role="header"> <div href="#" id="back">List</div> <h1 id="quick-title">Ikki | Geolocation and Wikipedia</h1></div>
 	<div data-role="content" id="quick-article"></div>
 </div> <!-- Article page -->
-
-
-<div data-role="page" id="explicit" class="slidehelp">
-	<div data-role="header"><h1><?php echo'Citadelle de Namur'?></h1></div>
-	<div data-role="content"><p>La citadelle de Namur, en Belgique, a de tous temps occupé une position stratégique au cœur de l'Europe. D'abord centre de commandement d'un important comté au Moyen Âge, elle fut ensuite convoitée et assiégée par tous les Grands d'Europe entre le xve siècle et le xixe siècle. À partir de 1891, on la transforma en vaste parc, véritable poumon de verdure surplombant la capitale de la Wallonie2.</p></div>
-</div>
-
-
 
 <script src="js/cssrefresh.js"></script>
 <script src="js/jquery.1.9.1.js"></script>
@@ -60,5 +69,3 @@
 <script src="js/script.js"></script>
 </body>
 </html>
-
-<p></p>

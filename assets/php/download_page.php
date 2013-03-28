@@ -15,7 +15,6 @@
 	$htmlPage = $html->load($page);
 	// Close request to clear up some resources
 	curl_close($curl);
-	echo "<h1>" . $htmlPage->find('td[class="entete"]', 0)->plaintext.'<hr>' . "</h1>";
 
 	foreach ( $htmlPage->find('div[class^=mw-content-ltr]') as $b )
 	{
@@ -29,20 +28,16 @@
 
 	// TABLE & HEADER
 	$('tr:not(:nth-child(2))', 'table.infobox_v2').hide();
-	$('table.toc').hide();
-	$('.homonymie').hide();
-
-	// edit links
-	$('span.editsection').hide();
-
-	// MISC
+	$('table.toc').hide(); // table of content
+	$('.homonymie').hide(); // similar articles with the same name
+	$('span.editsection').hide(); // wikipedia edit 
 	$('ul.gallery').hide(); // photo gallery
 	$('ul.gallery').prev().hide();
 	$('table.wikitable').hide(); // article table
 	$('table.wikitable').prev().hide();
 	$('span#coordinates').hide(); // coordonnées sous le titre
 	$('.bandeau').hide(); // bandeaux d'annonces pourries
-
+	$('.thumbcaption').hide(); // caption sous les images
 	// references & all arround
 	$('.references-small').prev().hide();
 	$('.references-small').next().hide();
@@ -54,4 +49,18 @@
 	// bottom: more useless links
 	$('ul.bandeau-portail').prev().hide();
 	$('ul.bandeau-portail').hide();
+
+	$('h2, h3', '#info .ui-content').on('click', function(){
+		$('.active').nextUntil('h2, h3').slideUp();
+		$('.active').not($(this)).removeClass('active');
+		$(this).toggleClass('active');
+		if($(this).hasClass('active')){
+			$(this).nextUntil('h2, h3').slideDown();
+		}else{
+			$(this).nextUntil('h2, h3').slideUp();
+		}
+	});
+	
+	
+
 </script>

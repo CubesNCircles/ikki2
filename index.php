@@ -8,6 +8,11 @@
 	<meta name="robots" content="all"> 
 	<meta name="author" content=""> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="apple-mobile-web-app-title" content="Ikki">
+	<link rel="apple-touch-startup-image" href="assets/img/4/apple-touch-startup-image.png" media="(device-height:480px)">
+	<link rel="apple-touch-startup-image" href="assets/img/5/apple-touch-startup-image.png" media="(device-height:568px)">
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/jquery.mobile.custom.css">
